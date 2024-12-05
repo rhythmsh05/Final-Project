@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Foster understanding and promote inclusive digital experiences for all">
+  <meta name="author" content="">
+  <!-- Bootstrap core CSS -->
+  <link href="https://getbootstrap.com/docs/4.0/examples/jumbotron/jumbotron.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Custom styles for Empower Ability Labs -->
+  <link rel="stylesheet" href="EmpowerAbilityLab.css">
+  <title>Empower Ability Labs</title>
+   <script>
+    function closeModal() {
+      var modal = document.getElementById("customModal");
+      modal.style.display = "none";
+      modal.setAttribute("aria-hidden", "true");
+      document.getElementById("openModalButton").focus(); // Return focus to the triggering element
+    }
+
+    // Handle navigation to different pages
+    document.querySelectorAll('nav ul li a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        if (this.href.includes("#")) {
+          e.preventDefault();
+          const targetID = this.getAttribute('href').substring(1);
+          const targetSection = document.getElementById(targetID);
+          targetSection.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    window.onpopstate = function (event) {
+      if (event.state) {
+        window.location.href = event.state;
+      }
+    };
+
+    document.querySelectorAll('nav ul li a').forEach(anchor => {
+      anchor.addEventListener('click', function () {
+        history.pushState(this.getAttribute("href"), null, this.getAttribute("href"));
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <header class="header" role="banner">
+    <div class="header-content">
+      <a href="index.html" aria-label="Go to homepage">
+        <img src="images/empowerabilitylabslogo.png" alt="Empower Ability Labs Logo" style="height: 80px; width: auto; padding: 5px;">
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="EmpowerAbilityLab.html" aria-label="Go to home section">Home</a></li>
+          <li><a href="services.html" aria-label="Go to services section">Services</a></li>
+          <li><a href="schedule_a_call.html" aria-label="Go to schedule a call section">Schedule a Call</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1" class="main-content">
+    
+  
+    <section id="schedule_a_call" class="container hidden">
+      <h2>Schedule a call</h2>
+      <div class="image_call">
+        <p id="services-content">Empower Ability Labs, we are dedicated to cultivating empathy and driving positive
+          change through immersive experiences. Fill out the form below and we’ll get back to you as soon as we can to
+          schedule a call with our sales team!</p>
+        <img src="images/scheduleacall.png" alt="Call scheduling image description" />
+      </div>
+      <form id="scheduleForm" onsubmit="handleSubmit(event)" aria-labelledby="scheduleCallForm">
+        <h3 id="scheduleCallForm" class="sr-only">Schedule a Call Form</h3>
+        <div class="form-group">
+          <label for="businessName">Business Name:</label>
+          <input type="text" id="businessName" name="businessName" aria-required="true" />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input type="text" id="phone" name="phone" placeholder="613-123-1234" aria-required="true" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" aria-describedby="emailError" aria-invalid="false" required />
+        </div>
+        <fieldset>
+          <legend>What would you like to talk about?</legend>
+          <label><input type="checkbox" name="example" value="labDays" id="option1" /> Awareness Lab Days and
+            Workshops</label>
+          <label><input type="checkbox" name="example" onchange="toggleEventDetails()" value="speaker" id="option2"/>
+            Invite a
+            Speaker</label>
+          <label><input type="checkbox" name="example" value="usability-testing" id="option3" /> Usability
+            Testing</label>
+        </fieldset>
+        <div class="form-group hiddenbox" id="eventDetails">
+          <label for="eventInfo">Tell us about your event:</label>
+          <textarea id="eventInfo" name="eventInfo" aria-label="Event information"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="updates" class="email-label">
+            <div class="custom-switch">
+              <input type="checkbox" id="updates" name="updates" aria-label="Receive email updates about services" />
+              <span class="slider"></span>
+            </div>
+            <span>Receive emails about updates and services</span>
+          </label>
+        </div>
+        <input type="submit" value="Schedule a Call" />
+      </form>
+      <div id="formMessage" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer>
+    © Copyright Empower Ability Labs Inc 2023. All rights reserved.
+  </footer>
+
+  <script src="EmpowerAbilityLab.js"></script>
+</body>
+
+</html>
+
+
+ 

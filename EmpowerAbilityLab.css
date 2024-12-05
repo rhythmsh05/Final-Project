@@ -1,0 +1,278 @@
+/* CSS Code for Empower Ability Labs - Cream Color Scheme */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff8e1; /* Light cream background */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.main-content {
+  padding: 20px 0px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.header {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d2b48c; /* Tan color for header */
+  padding: 10px 30px;
+  border-radius: 0 0 20px 20px; /* Rounded bottom corners */
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff; /* White color for text */
+  font-size: 1.1em;
+  padding: 10px 20px;
+  background-color: #a0522d; /* Sienna background for nav links */
+  border-radius: 25px; /* Rounded links */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+nav ul li a:hover {
+  background-color: #8b4513; /* Darker sienna on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+  background-color: #8b4513; /* Dark cream footer */
+  color: #ffffff;
+  padding: 15px;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 100%;
+  padding: 0 15px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.section-table {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 10px 0;
+  align-items: stretch;
+}
+
+.approach {
+  background-color: #f5deb3; /* Wheat color for contrast */
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  background-color: #a0522d; /* Sienna for buttons */
+  color: #ffffff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px; /* Rounded button */
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.btn-primary:hover {
+  background-color: #8b4513; /* Slightly darker sienna for hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+fieldset {
+  border: 1px solid #d2b48c; /* Tan border for fieldset */
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.formMessage {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #d1e7dd; /* Light green for success message */
+  color: #0f5132;
+  border: 1px solid #badbcc;
+  border-radius: 5px;
+  display: block;
+  text-align: center;
+}
+
+/* Modal Highlight Effect */
+.highlight-modal {
+  border: 3px solid #ffcc00; /* Adjust this as needed for a highlight effect */
+  box-shadow: 0 0 15px #ffcc00;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-content.highlight {
+  background-color: #ffebcc; /* Light yellow for highlighted modal */
+}
+
+/* Hide the default checkbox */
+.custom-switch input[type="checkbox"] {
+  display: none;
+}
+
+.hiddenbox{
+  display: none;
+}
+
+
+/* Create the switch slider */
+.custom-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-right: 10px;
+}
+
+.custom-switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.custom-switch .slider:before {
+  content: "";
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  border-radius: 50px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+/* When the checkbox is checked, move the slider */
+.custom-switch input[type="checkbox"]:checked + .slider {
+  background-color: #4caf50; /* Green when checked */
+}
+
+.custom-switch input[type="checkbox"]:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Optional: Add a label text color */
+.custom-switch input[type="checkbox"]:checked + .slider {
+  background-color: #4caf50; /* Green when checked */
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .header {
+    padding: 15px;
+  }
+
+  .section-table {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  nav ul li a {
+    font-size: 1em;
+    padding: 8px 15px;
+  }
+
+  .btn-primary {
+    font-size: 16px;
+    padding: 12px 25px;
+  }
+
+  .section-table {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .header {
+    padding: 10px;
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+
+  .imageService img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  h2, h3 {
+    font-size: 1.5em;
+  }
+
+  .approach {
+    padding: 10px;
+  }
+
+  .header {
+    padding: 5px;
+  }
+
+  .header-content {
+    text-align: center;
+  }
+
+  footer {
+    padding: 10px;
+  }
+}

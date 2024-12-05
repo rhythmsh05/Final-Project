@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Foster understanding and promote inclusive digital experiences for all">
+  <meta name="author" content="">
+  <!-- Bootstrap core CSS -->
+  <link href="https://getbootstrap.com/docs/4.0/examples/jumbotron/jumbotron.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Custom styles for Empower Ability Labs -->
+  <link rel="stylesheet" href="EmpowerAbilityLab.css">
+  <title>Empower Ability Labs</title>
+</head>
+<body>
+  <header class="header" role="banner">
+    <div class="header-content">
+      <a href="index.html" aria-label="Go to homepage">
+        <img src="images/empowerabilitylabslogo.png" alt="Empower Ability Labs Logo" style="height: 80px; width: auto; padding: 5px;">
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="EmpowerAbilityLab.html" aria-label="Go to home section">Home</a></li>
+          <li><a href="services.html" aria-label="Go to services section">Services</a></li>
+          <li><a href="schedule_a_call.html" aria-label="Go to schedule a call section">Schedule a Call</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1" class="main-content">
+    <!-- Home Section -->
+    <section id="home" class="container">
+      <h2>Welcome to Empower Ability Labs!</h2>
+      <p>Empower Ability Labs is a hub for learning and empathy-building. We are on a mission to foster understanding and promote inclusive digital experiences for all.</p>
+      <p>We offer a range of services designed to promote accessibility awareness, drive inclusivity, and enhance the user experience. Discover answers to questions like:</p>
+      <ul>
+        <li>How do people with disabilities use technology and navigate the digital world?</li>
+        <li>What tools do they employ?</li>
+      </ul>
+
+      <button id="openModalButton" class="btn-primary" aria-label="Meet the Empower Community">Meet the Empower Community!</button>
+
+      <div class="section-table">
+        <div class="approach">
+          <h3>Our Approach</h3>
+          <p>Empower Ability Labs utilizes a hands-on approach to raise awareness and promote empathy. Our immersive workshops and lab days provide participants with a unique opportunity to step into the shoes of individuals with disabilities and navigate the world from their perspective.</p>
+          <a href="https://www.google.com/search/howsearchworks/our-approach/" aria-label="Learn more about our approach">Learn More</a>
+        </div>
+        <div class="approach">
+          <h3>Services</h3>
+          <p>Promote accessibility awareness and enhance the user experience.</p>
+          <ul class="approach">
+            <li>Empathy lab days and workshops</li>
+            <li>Go beyond WCAG compliance!</li>
+            <li>Inspirational speakers.</li>
+          </ul>
+          <a href="services.html" aria-label="Learn more about our services">Learn More</a>
+        </div>
+        <div class="approach">
+          <h3>Testimonials</h3>
+          <p>Invite a speaker with disabilities to share their unique journey. This captivating addition to your upcoming event will offer insights that resonate, inspire, educate, and enrich your team’s understanding of inclusion.</p>
+          <a href="https://dictionary.cambridge.org/us/dictionary/english/testimonial" aria-label="Learn more about testimonials">Learn More</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="customModal" class="modal hidden" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitle">Community Steering Committee</h5>
+          <button type="button" class="btn-close" onclick="closeModal()" aria-label="Close modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>We get aha moments from product managers who try our services for the first time.</p>
+          <p>We offered many lab days, workshops, and usability testing services to organizations such as:</p>
+          <ul>
+            <li>McGill University</li>
+            <li>Walmart.ca</li>
+            <li>Apple.ca</li>
+            <li>Google.ca</li>
+            <li>Government of Canada</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-secondary btn-close" onclick="closeModal()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © Copyright Empower Ability Labs Inc 2023. All rights reserved.
+  </footer>
+
+  <script src="EmpowerAbilityLab.js"></script>
+</body>
+</html>
